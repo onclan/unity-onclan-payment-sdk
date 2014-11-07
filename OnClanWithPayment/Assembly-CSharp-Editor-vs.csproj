@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{5B0C5813-0AEA-39D8-64EA-6382A7CAE44B}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_IPHONE;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_IPHONE_API;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;UNITY_IOS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;ENABLE_DUCK_TYPING</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Editor\IDController.cs" />
+     <Compile Include="Assets\Editor\ManifestMode.cs" />
+     <Compile Include="Assets\Editor\PenaltyEditorTools.cs" />
+     <Compile Include="Assets\Editor\XUPorter\MiniJSON\MiniJSON.cs" />
+     <Compile Include="Assets\Editor\XUPorter\PBX Editor\PBXBuildFile.cs" />
+     <Compile Include="Assets\Editor\XUPorter\PBX Editor\PBXBuildPhase.cs" />
+     <Compile Include="Assets\Editor\XUPorter\PBX Editor\PBXDictionary.cs" />
+     <Compile Include="Assets\Editor\XUPorter\PBX Editor\PBXFileReference.cs" />
+     <Compile Include="Assets\Editor\XUPorter\PBX Editor\PBXGroup.cs" />
+     <Compile Include="Assets\Editor\XUPorter\PBX Editor\PBXList.cs" />
+     <Compile Include="Assets\Editor\XUPorter\PBX Editor\PBXObject.cs" />
+     <Compile Include="Assets\Editor\XUPorter\PBX Editor\PBXParser.cs" />
+     <Compile Include="Assets\Editor\XUPorter\PBX Editor\PBXProject.cs" />
+     <Compile Include="Assets\Editor\XUPorter\PBX Editor\PBXSortedDictionary.cs" />
+     <Compile Include="Assets\Editor\XUPorter\PBX Editor\PBXVariantGroup.cs" />
+     <Compile Include="Assets\Editor\XUPorter\XCBuildConfiguration.cs" />
+     <Compile Include="Assets\Editor\XUPorter\XCConfigurationList.cs" />
+     <Compile Include="Assets\Editor\XUPorter\XCMod.cs" />
+     <Compile Include="Assets\Editor\XUPorter\XCProject.cs" />
+     <Compile Include="Assets\Editor\XUPorter\XCodePostProcess.cs" />
+     <None Include="Assets\Plugins\Android\res\values-v11\styles.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\values\strings_appota.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_fragment_payment.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\bin\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\res\values\strings.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\btn_cab_done_appota.xml" />
+     <None Include="Assets\Plugins\Android\res\values\styles.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_activity_login.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_layout_spn_bank.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_icon_spinner_item.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\values-v11\styles_appota.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_sms_type_item.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\bin\R.txt" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_payment_logo.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\anim\com_appota_linear_interpolator.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\selectable_background_appota.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_activity_unipin.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\values\dimens_appota.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\values\com_appota_vpi__styles.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_icon_spinner_dropdown_item.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_layout_confirm_logout.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_activity_payment.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_layout_update_info_before_remove.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_nganluong_fragment.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_payment_method_item.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\ab_background_textured_appota.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\tab_indicator_ab_appota.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_activity_user_info.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_simple_spinner_item.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_activity_confirm_paypal.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\values\styles_appota.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\values\com_appota_vpi__defaults.xml" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\com_appota_tab_button_selector.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_fragment_user_info.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_amount_list_item.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_facebook_login_web.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_sms_button.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_fragment_register.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_activity_google_play.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\anim\com_appota_right_to_left.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_sdk_button_layout.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_activity_sms.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_list_account_item.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_fragment_ewallet.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_activity_card.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\com_appota_btn_red_click.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_layout_select_user.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_info_item.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\com_appota_vpi__tab_indicator.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_app_msg.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\pressed_background_appota.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\progress_horizontal_appota.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\values\com_appota_vpi__colors.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\com_appota_btn_white_click.xml" />
+     <None Include="Assets\Plugins\Android\res\values-v14\styles.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_main_layout.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_fragment_login.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\color\com_appota_tab_text_selector.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_layout_update_info_warning.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_simple_spinner_dropdown_item.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\com_appota_bg_main_layout.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\anim\com_appota_left_to_right.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\com_appota_button_click.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\com_appota_btn_green_click.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\values\com_appota_vpi__attrs.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\com_appota_circular.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\values\colors_appota.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\values\attrs_anytextview.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\com_appota_btn_blue_click.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_btn_info.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\values\arrays_appota.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\spinner_background_ab_appota.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_load_more_footer.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\color\com_appota_vpi__dark_theme.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\anim\com_appota_infinite_rotate.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\color\com_appota_vpi__light_theme.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_fragment_update_user_info.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\values-in\strings_appota.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_activity_confirm_bank.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_fragment_select_sms.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\values-vi\strings_appota.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\custom_tab_indicator.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_dropdown_list_item.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_transaction_item.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\drawable\com_appota_more_button_click.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_fragment_transaction_log.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_activity_paypal.xml" />
+     <None Include="Assets\Plugins\Android\AppotaSDK\res\layout\com_appota_activity_bank.xml" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="ICSharpCode.SharpZipLib">
+ <HintPath>/Users/appdaily/Desktop/UnitySDK/unity-onclan-sdk/OnClanWithPayment/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{ACBE576F-BACD-4D91-C318-030ABCADA2DD}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-vs.csproj">
+      <Project>{181EAD49-406B-894F-AB12-239631542FF8}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
