@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Appota/AppotaSDKReceiver.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/Android/AndroidManifest.xml">
     <Files>
-      <File FileName="Assets/Scripts/GUIController.cs" Line="49" Column="1" />
-      <File FileName="Assets/Appota/AppotaSDKReceiver.cs" Line="32" Column="3" />
+      <File FileName="Assets/Scripts/GUIController.cs" Line="45" Column="1" />
+      <File FileName="Assets/Appota/AppotaSDKHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="17" Column="114" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

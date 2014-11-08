@@ -40,11 +40,13 @@ public class AppotaSDKReceiver : MonoBehaviour {
 		}
 	}
 
+	#if UNITY_ANDROID
 	public void GetOnClanUser(string OnClanUser)
 	{
 		Debug.Log("Appota" + OnClanUser);
 		OnClanSDKHandler.OnClanUser = OnClanUser;
     }
+	#endif
 
 	public void OnLoginSuccess(string appotaSession)
 	{

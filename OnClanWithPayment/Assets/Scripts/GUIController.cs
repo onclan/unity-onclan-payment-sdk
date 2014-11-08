@@ -10,14 +10,12 @@ public class GUIController : MonoBehaviour {
 	void Start () {
 	
 		#if UNITY_IPHONE
-		//AppotaSDKHandler.Instance.Init("e8a1ffd03bfe5d401d875df633cd43eb051f0a4fc", "060f9c20e5259e2462f1cc00c15c6f93051f0a4fc", "1e1aa54ce3c646d8f6456558434d9475051f74156", "game_state","http://api.appota.com/notice_url","http://api.appota.com/config_file/config.json");
 		AppotaSDKHandler.Instance.Init();
 		// Need this function for callback
 		AppotaSDKHandler.Instance.SetDelegate();
 		#endif
 		#if UNITY_ANDROID
 		AppotaSDKHandler.Instance.Init();
-		//AppotaSDKHandler.Instance.Init ("1e1aa54ce3c646d8f6456558434d9475051f74156", "ac9859fe645780570adeefd0a062d8f4051f0a4fc", "http://appota.com/notice_url", "https://developer.appota.com/config.php");
 		//AppotaSDKHandler.Instance.SetAutoShowLogin(false);
 		#endif
 	}
