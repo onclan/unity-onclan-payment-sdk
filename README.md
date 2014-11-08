@@ -11,7 +11,7 @@ Import SDK
 ---
 Hãy chắc chắn là bạn đã có bản UnityOnClanSDK.unitypackage mới nhất. Sau khi mở Unity, để import package vào project, bạn click chuột phải trong Tab Project và làm theo hướng dẫn bên dưới.
 
-![](docs/vn/OnClan_Import.png) </br>
+![](docs/vn/Appota_Import.png) </br>
 
 
 Bức ảnh cuối cùng hiển thị cấu trúc thư mục của OnClan SDK. Bạn đã import thành công.
@@ -34,10 +34,14 @@ Checkout repo: https://github.com/appota/ios-onclan-sdk
 >
 > OnClanSDK.framework
 
+Checkout repo: https://github.com/appota/ios-game-sdk
+> AppotaBundle.bundle
+>
+> AppotaSDK.framework
 
 Cấu hình SDK
 ---
-**Cấu hình OnClan Setting**: Để sử dụng các chức năng của OnClan SDK trước tiên cần vào menu Appota/OnClan Setting để cài đặt các cấu hình ID
+**Cấu hình Appota Setting**: Để sử dụng các chức năng của OnClan SDK trước tiên cần vào menu Appota/Appota Setting để cài đặt các cấu hình ID
 
 ![](docs/vn/OnClan_Config_1.png) </br>
 
@@ -45,7 +49,7 @@ Cửa sổ Setting được hiện ra, ta cần điền đầy đủ thông tin 
 
 ![](docs/vn/OnCaln_Config_2.png) </br>
 
-Cấu hình được phân chia làm 2 mục riêng biệt:
+Cấu hình được phân chia làm 3 mục riêng biệt:
 
 #### OnClan Settings
 
@@ -79,6 +83,12 @@ Cấu hình được phân chia làm 2 mục riêng biệt:
 >
 > ![](docs/vn/OnClan_Google_Compare_Bundle.png) </br>
 
+#### Payment Settings
+
+- **PaymentState (optional)**: YOUR_PAYMENT_STATE
+- **ConfigUrl**: URL tới file config JSON
+- **NoticeURL**: URL nhận thông báo từ Appota khi có giao dịch phát sinh.
+
 Chọn **Update Settings** sau khi đã hoàn thành các thông số ID.
 
 Sử dụng SDK
@@ -88,14 +98,34 @@ Sử dụng SDK
 Trước khi có thể sử dụng các chức năng của SDK, cần gọi hàm khởi tạo để cấu hình ứng dụng:
 
 ```c#
-public void ConfigureOCSDK();
+public void Init();
 ```
 *Cách sử dụng*: Gọi hàm này khi game bắt đầu được khởi tạo, nên đặt trong phương thức Override `Start()` hoặc `Awake()` của Unity và chỉ nên gọi một lần duy nhất trong game.
 ```c#
-OnClanSDKHandler.Instance.ConfigureOCSDK();
+AppotaSDKHandler.Instance.Init();
+```
+####Payment Function
+Sử dụng các phương thức của class AppotaSDKHandler để thực hiện các chức năng thanh toán
+```c#
+void ShowLoginView(): phương thức hiện form Login.
+void SetAutoShowLogin(bool autoShowLogin): cài đặt chế độ tự động hiện form Login.
+bool IsUserLogin(): trả về true nếu như người dùng đã login.
+void Logout(): đăng xuất khỏi ứng dụng.
+void SwitchAccount(): đăng nhập với tài khoản khác.
+void MakePayment(): show form giao dịch thanh toán.
+void ShowUserInfo(): hiển thị thông tin User.
+void SetState(string paymentState): cài đặt trạng thái thanh toán.
+```
+*iOS Platform* có sự khác biệt với các chức năng:
+```c#
+void ShowPaymentButton(): show button truy cập nhanh vào form thanh toán.
+void HidePaymentButton(): hide button truy cập nhanh vào form thanh toán.
+void SetDelegate(): Cài đặt Delegate để có thể sử dụng được callback (đã được cài đặt mặc định trong Init(), nếu như không cần thiết, developer có thể comment lại dòng lệnh này)
 ```
 
-####Hiện Leaderboard
+####OnClan Function:
+
+#####Hiện Leaderboard
 Hàm hiển thị bảng xếp hạng thành tích (Leaderboard)
 
 ```c#
@@ -109,7 +139,7 @@ hạng thành tích trong game.
 OnClanSDKHandler.Instance.ShowLeaderBoard();
 ```
 
-####Post Score 
+#####Post Score 
 Submit điểm lên Leaderboard.
 
 ```c#
@@ -121,7 +151,8 @@ public void PostScore(int score);
 OnClanSDKHandler.Instance.PostScore(score);
 ```
 
-**Callback:** Nhận kết quả trả về từ OnClan SDK và xử lý bằng cách cài đặt phần xử lý kết quả trong thân các hàm trong scripts <code>OnClanSDKReceiver.cs</code>.
+####Callback: 
+Nhận kết quả trả về từ OnClanPayment SDK và xử lý bằng cách cài đặt phần xử lý kết quả trong thân các hàm trong scripts <code>OnClanSDKReceiver.cs</code>.
 ```c#
 // OnClanSDKReceiver.cs 
 public void OnLoginSuccess(string appotaSession)
@@ -141,6 +172,15 @@ void OnSwitchAccountSuccess(string appotaSession)
 	// Cài đặt phần xử lý
 }
 ```
+
+Scripts <code>AppotaSDKReceiver.cs</code>
+```c#
+public void OnPaymentSuccess(string transactionResult)
+{
+    // Cài đặt phần xử lý
+}
+```
+- <code>@transactionResult</code>: trả về theo định dạng: https://github.com/appota/ios-game-sdk/blob/master/payment_format
 
 **Cài đặt Icon Game (Android platform only)**
 
