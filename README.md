@@ -1,7 +1,7 @@
-OnClanSDK Unity 
+OnClanPaymentSDK Unity 
 =========
 
-**Các bước tích hợp OnClanSDK**
+**Các bước tích hợp OnClanPaymentSDK**
 
   - Import SDK vào project
   - Cấu hình SDK
@@ -14,7 +14,7 @@ Hãy chắc chắn là bạn đã có bản UnityOnClanSDK.unitypackage mới nh
 ![](docs/vn/Appota_Import.png) </br>
 
 
-Bức ảnh cuối cùng hiển thị cấu trúc thư mục của OnClan SDK. Bạn đã import thành công.
+Bức ảnh cuối cùng hiển thị cấu trúc thư mục của OnClanPayment SDK. Bạn đã import thành công.
 
 **Lưu ý:** Để có thể sử dụng SDK cho iOS platform, bạn cần đặt toàn bộ frameworks cần thiết vào folder: Assets/Editor/XUPorter/Mods/iOS/Appota/ 
 
@@ -41,7 +41,7 @@ Checkout repo: https://github.com/appota/ios-game-sdk
 
 Cấu hình SDK
 ---
-**Cấu hình Appota Setting**: Để sử dụng các chức năng của OnClan SDK trước tiên cần vào menu Appota/Appota Setting để cài đặt các cấu hình ID
+**Cấu hình Appota Setting**: Để sử dụng các chức năng của OnClanPayment SDK trước tiên cần vào menu Appota/Appota Setting để cài đặt các cấu hình ID
 
 ![](docs/vn/OnClan_Config_1.png) </br>
 
