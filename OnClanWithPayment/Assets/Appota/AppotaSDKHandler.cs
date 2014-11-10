@@ -94,6 +94,7 @@ public class AppotaSDKHandler {
 		setOnlyOpenProfile(true);
 		setShowCloseLoginView(true);
 		setAutoShowPaymentButton(false);
+		AppotaSDKHandler.Instance.SetDelegate();
 	}
 
 	// Need this function for callback

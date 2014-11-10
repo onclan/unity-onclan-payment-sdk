@@ -12,7 +12,7 @@ public class GUIController : MonoBehaviour {
 		#if UNITY_IPHONE
 		AppotaSDKHandler.Instance.Init();
 		// Need this function for callback
-		AppotaSDKHandler.Instance.SetDelegate();
+		//AppotaSDKHandler.Instance.SetDelegate();
 		#endif
 		#if UNITY_ANDROID
 		AppotaSDKHandler.Instance.Init();
