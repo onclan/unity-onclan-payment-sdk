@@ -9,7 +9,7 @@ OnClanPaymentSDK Unity
 
 Import SDK
 ---
-Hãy chắc chắn là bạn đã có bản UnityOnClanSDK.unitypackage mới nhất. Sau khi mở Unity, để import package vào project, bạn click chuột phải trong Tab Project và làm theo hướng dẫn bên dưới.
+Hãy chắc chắn là bạn đã có bản UnityOnClanPaymentSDK.unitypackage mới nhất. Sau khi mở Unity, để import package vào project, bạn click chuột phải trong Tab Project và làm theo hướng dẫn bên dưới.
 
 ![](docs/vn/Appota_Import.png) </br>
 
@@ -28,13 +28,11 @@ Trong folder Frameworks/
 > GooglePlus.bundle	
 >
 > GooglePlus.framework
-
-Checkout repo: https://github.com/appota/ios-onclan-sdk
+>
 > OnClanBundle.bundle
 >
 > OnClanSDK.framework
-
-Checkout repo: https://github.com/appota/ios-game-sdk
+>
 > AppotaBundle.bundle
 >
 > AppotaSDK.framework
