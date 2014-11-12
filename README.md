@@ -16,7 +16,8 @@ Hãy chắc chắn là bạn đã có bản UnityOnClanPaymentSDK.unitypackage m
 
 Bức ảnh cuối cùng hiển thị cấu trúc thư mục của OnClanPayment SDK. Bạn đã import thành công.
 
-**Lưu ý:** Để có thể sử dụng SDK cho iOS platform, bạn cần đặt toàn bộ frameworks cần thiết vào folder: Assets/Editor/XUPorter/Mods/iOS/Appota/ 
+####iOS platform: 
+Để có thể sử dụng SDK cho nền tảng iOS, bạn cần đặt toàn bộ frameworks cần thiết vào folder: Assets/Editor/XUPorter/Mods/iOS/Appota/ 
 
 *Danh sách các frameworks*:
 
