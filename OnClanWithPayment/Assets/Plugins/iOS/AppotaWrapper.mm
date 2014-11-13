@@ -114,7 +114,7 @@ extern "C" {
 	}
 
 	const void setPaymentState(const char *paymentState){
-		[[AppotaGameSDKConfigure sharedGameConfig] setPaymentState]
+		[[AppotaGameSDKConfigure sharedGameConfig] setPaymentState];
 	}
 	
 	const bool isUserLogin(){
