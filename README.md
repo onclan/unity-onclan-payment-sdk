@@ -1,15 +1,17 @@
 OnClanPaymentSDK Unity 
 =========
 
-**Các bước tích hợp OnClanPaymentSDK**
+Other Languages: [Tiếng Việt](README_vi.md)
 
-  - Import SDK vào project
-  - Cấu hình SDK
-  - Sử dụng SDK
+**Steps to integrate OnClanPaymentSDK**
+
+  - Import SDK into your project
+  - Config SDK
+  - Use SDK
 
 Import SDK
 ---
-Hãy chắc chắn là bạn đã có bản UnityOnClanPaymentSDK.unitypackage mới nhất. Sau khi mở Unity, để import package vào project, bạn click chuột phải trong Tab Project và làm theo hướng dẫn bên dưới.
+Make sure you have the lastest UnityOnClanPaymentSDK.unitypackage. Open Unity, right click inside Tab Project and follow the instructions below.
 
 ![](docs/vn/Appota_Import.png) </br>
 
@@ -17,11 +19,11 @@ Hãy chắc chắn là bạn đã có bản UnityOnClanPaymentSDK.unitypackage m
 Bức ảnh cuối cùng hiển thị cấu trúc thư mục của OnClanPayment SDK. Bạn đã import thành công.
 
 ####iOS platform: 
-Để có thể sử dụng SDK cho nền tảng iOS, bạn cần đặt toàn bộ frameworks cần thiết vào folder: Assets/Editor/XUPorter/Mods/iOS/Appota/ 
+To use the SDK for the iOS platform, you need to put all necessary frameworks in folder: Assets/Editor/XUPorter/Mods/iOS/Appota/ 
 
-*Danh sách các frameworks*:
+*List frameworks*:
 
-Trong folder Frameworks/
+In folder Frameworks/
 > FacebookSDK.framework
 >
 > GoogleOpenSource.framework
@@ -38,9 +40,9 @@ Trong folder Frameworks/
 >
 > AppotaSDK.framework
 
-Cấu hình SDK
+Config SDK
 ---
-**Cấu hình Appota Setting**: Để sử dụng các chức năng của OnClanPayment SDK trước tiên cần vào menu Appota/Appota Setting để cài đặt các cấu hình ID
+**Config OnClan Setting**: To use OnClanPayment SDK features, you need to access menu Appota/Appota Setting to set the ID configurations.
 
 ![](docs/vn/OnClan_Config_1.png) </br>
 
@@ -48,127 +50,129 @@ Cửa sổ Setting được hiện ra, ta cần điền đầy đủ thông tin 
 
 ![](docs/vn/OnCaln_Config_2.png) </br>
 
-Cấu hình được phân chia làm 3 mục riêng biệt:
+Configuration is divided into 3 separate sections:
 
 #### OnClan Settings
 
-- **Game ID**: id tương ứng với game của nhà phát triển, liên hệ với Appota Game Supporter để nhận key.
-- **Api Key**: liên hệ với Appota Game Supporter để nhận được key.
-- **Client ID**: liên hệ với Appota Game Supporter để nhận key.
+- **Game ID**: is granted when register application on website http://developer.appota.com of Appota.
+- **Api Key**: is granted when register application on website http://developer.appota.com of Appota.
+- **Client ID**: Config on dev.appota.com 
 
 #### Social Settings
-- **Facebook ID**: nhận Facebook ID từ việc đăng ký tạo ứng dụng trên trang https://developers.facebook.com/ (liên hệ với Appota Game team để tạo ứng dụng Facebook hoặc bạn có thể tự tạo ứng dụng cho riêng mình theo hướng dẫn của trang developer). 
+- **Facebook ID**: is granted when register application on website developer of Facebook: https://developers.facebook.com/ (contact Appota Supporter to create Facebook application or you can create your own application as instructed by developer site). 
 
 > ![](docs/vn/OnClan_Facebook_AppID.png) </br>
 >
-> **Lưu ý:** Cấu hình BundleID(iOS) hay Package Name(Android) được khai báo trên trang Developer phải trùng khớp với Bundle Indentifier trong project Unity.
+> **Note:** Configuration BundleID(iOS) or Package Name(Android) is declared on the page Developer must be match with Bundle Indentifier in Unity project.
 >
 > ![](docs/vn/OnClan_Facebook_Compare_Bundle.png) </br>
 
-- **Twitter Key**: nhận được khi đăng ký tạo ứng dụng trên trang https://dev.twitter.com/
-- **Twitter Secret**: nhận được khi đăng ký tạo ứng dụng trên trang https://dev.twitter.com/
+- **Twitter Key**: is granted when register application on website https://dev.twitter.com/
+- **Twitter Secret**: is granted when register application on website https://dev.twitter.com/
 
 > ![](docs/vn/OnClan_Twitter_Key.png) </br>
 > 
-> Để có thể đăng nhập được Twitter, cần cấu hình thêm mục Callback URL
+> To be able to login Twitter, must config Callback URL.
 >
 > ![](docs/vn/OnClan_Twitter_Detail.png) </br>
 
-- **Google Client ID**: nhận Google Client ID từ việc đăng ký tạo ứng dụng trên trang Developer của Google theo hướng dẫn https://developers.google.com/+/mobile/ios/getting-started (liên hệ với Appota Game team để tạo ứng dụng hoặc bạn có thể tự tạo ứng dụng của riêng mình) 
+- **Google Client ID**: is granted when register application on website https://developers.google.com/+/mobile/ (contact Appota Supporter to create Facebook application or you can create your own application as instructed by developer site).
 
 > ![](docs/vn/OnClan_Google_Client_Id.png) </br>
 >
-> **Lưu ý:** Cấu hình BundleID(iOS) hay Package Name(Android) được khai báo trên trang Developer phải trùng khớp với Bundle Indentifier trong project Unity.
+> **Note:** Configuration BundleID(iOS) or Package Name(Android) is declared on the page Developer must be match with Bundle Indentifier in Unity project.
 >
 > ![](docs/vn/OnClan_Google_Compare_Bundle.png) </br>
 
 #### Payment Settings
 
 - **PaymentState (optional)**: YOUR_PAYMENT_STATE
-- **ConfigUrl**: URL tới file config JSON
-- **NoticeURL**: URL nhận thông báo từ Appota khi có giao dịch phát sinh.
+- **ConfigUrl**: URL to file config JSON
+- **NoticeURL**: URL receiving notifications from Appota when incurring transaction.
 
-Chọn **Update Settings** sau khi đã hoàn thành các thông số ID.
+File config JSON is created from tool https://developer.appota.com/sdktool.php<br/>
 
-Sử dụng SDK
+If you use Sandbox, you need to click to Using Sandbox. (iOS Platform: SANDBOX_INAPP_API_KEY will be use instead of ApiKey if Sandbox mode was active)
+
+Select **Update Settings** after completing the ID Configuration.
+
+Use SDK
 ---
 
-####Khởi tạo SDK
-Trước khi có thể sử dụng các chức năng của SDK, cần gọi hàm khởi tạo để cấu hình ứng dụng:
+####Initialize SDK
+Before using SDK features, you need to call constructor function to config application:
 
 ```c#
 public void Init();
 ```
-*Cách sử dụng*: Gọi hàm này khi game bắt đầu được khởi tạo, nên đặt trong phương thức Override `Start()` hoặc `Awake()` của Unity và chỉ nên gọi một lần duy nhất trong game.
+*Usage*: This function is called when the game starts initializing, should be placed in Override method `Start()` or `Awake()` of Unity and just be called only once in game.
 ```c#
 AppotaSDKHandler.Instance.Init();
 ```
 ####Payment Function
-Sử dụng các phương thức của class AppotaSDKHandler để thực hiện các chức năng thanh toán
+Using functions of class AppotaSDKHandler to implement next features:<br/>
 ```c#
-void ShowLoginView(): phương thức hiện form Login.
-void SetAutoShowLogin(bool autoShowLogin): cài đặt chế độ tự động hiện form Login.
-bool IsUserLogin(): trả về true nếu như người dùng đã login.
-void Logout(): đăng xuất khỏi ứng dụng.
-void SwitchAccount(): đăng nhập với tài khoản khác.
-void MakePayment(): show form giao dịch thanh toán.
-void ShowUserInfo(): hiển thị thông tin User.
-void SetState(string paymentState): cài đặt trạng thái thanh toán.
+void ShowLoginView(): method show form Login.
+void SetAutoShowLogin(bool autoShowLogin): Set mode “Auto Show Login form”
+bool IsUserLogin(): response true if user has login.
+void Logout(): logout from application.
+void SwitchAccount(): login as a different account.
+void MakePayment(): show form payment transaction.
+void ShowUserInfo(): display User information.
+void SetState(string paymentState): Set payment state.
 ```
-*iOS Platform* có sự khác biệt với các chức năng:
+*iOS Platform* other features:
 ```c#
-void ShowPaymentButton(): show button truy cập nhanh vào form thanh toán.
-void HidePaymentButton(): hide button truy cập nhanh vào form thanh toán.
-void SetDelegate(): Cài đặt Delegate để có thể sử dụng được callback (đã được cài đặt mặc định trong Init(), nếu như không cần thiết, developer có thể comment lại dòng lệnh này)
+void ShowPaymentButton(): show quick-access-payment-form button.
+void HidePaymentButton(): hide quick-access-payment-form button.
+void SetDelegate(): Set Delegate for using callback (have already been set in function <code>Init()</code> ). </
 ```
 
 ####OnClan Function:
 
-#####Hiện Leaderboard
-Hàm hiển thị bảng xếp hạng thành tích (Leaderboard)
+####Show Leaderboard
 
 ```c#
 public void ShowLeaderBoard();
 ```
 
-*Cách sử dụng*: Gọi hàm này khi nhà phát triển cần hiển thị bảng xếp
-hạng thành tích trong game.
+*Usage*: Call this function when the developers need to display Leaderboard in the game.
 
 ```c#
 OnClanSDKHandler.Instance.ShowLeaderBoard();
 ```
 
-#####Post Score 
-Submit điểm lên Leaderboard.
+####Post Score 
+Submit score to Leaderboard.
 
 ```c#
 public void PostScore(int score);
 ```
-*Cách sử dụng*: Sau khi hoàn thành màn chơi, gọi hàm này để submit số điểm của người chơi lên. Server sẽ kiểm tra, nếu cao hơn điểm cũ sẽ thay thế bằng điểm hiện tại..
+*Usage*: After completing scene game, call this function to submit player's score. Server will check, a new higher score will replace old.
 
 ```c#
 OnClanSDKHandler.Instance.PostScore(score);
 ```
 
 ####Callback: 
-Nhận kết quả trả về từ OnClanPayment SDK và xử lý bằng cách cài đặt phần xử lý kết quả trong thân các hàm trong scripts <code>OnClanSDKReceiver.cs</code>.
+Getting results returned from OnClan SDK and handling by setting "result processing" in functions in script <code>OnClanSDKReceiver.cs</code>.
 ```c#
 // OnClanSDKReceiver.cs 
 public void OnLoginSuccess(string appotaSession)
 {
-    // @appotaSession trả về là access_token của User
-	// Cài đặt phần xử lý
+    // @appotaSession return access_token of User
+	// Set processing part
 }
 
 public void OnLogoutSuccess()
 { 
-	// Cài đặt phần xử lý
+	// Set processing part
 }
 
 void OnSwitchAccountSuccess(string appotaSession)
 {
-    // @appotaSession trả về là access_token của User
-	// Cài đặt phần xử lý
+    // @appotaSession return access_token of User
+	// Set processing part
 }
 ```
 
@@ -176,16 +180,15 @@ Scripts <code>AppotaSDKReceiver.cs</code>
 ```c#
 public void OnPaymentSuccess(string transactionResult)
 {
-    // Cài đặt phần xử lý
+    // Set processing part
 }
 ```
-- <code>@transactionResult</code>: trả về theo định dạng: https://github.com/appota/ios-game-sdk/blob/master/payment_format
+- <code>@transactionResult</code>: return with format: https://github.com/appota/ios-game-sdk/blob/master/payment_format
+**Setting Icon Game (Android platform only)**
 
-**Cài đặt Icon Game (Android platform only)**
-
-Đối với Android platform, khi nhà phát triển sử dụng thư viện của bên thứ 3, Unity sẽ mặc định lấy icon Android thay thế cho Icon của game. Để tránh điều này, bạn đặt icons game vào trong folder Assets/Plugins/Android/res/drawable-xx 
+In Android platform, when developers use 3rd-party libraries, Unity will default replace game's icon with Android icon. To avoid this, moving icons game to folder Assets/Plugins/Android/res/drawable-xx 
 
 ![](docs/vn/OnClan_Icon_Settup.png) </br>
 
-Mỗi folder *drawable* tương ứng với mỗi kích thước, độ phân giải của màn hình. Do vậy cần đặt các icon tương ứng vào các folder. Để biết thêm chi tiết về *drawable* tham khảo: 
+Each folder *drawable* corresponding to each size, the resolution of the screen. So, should put the corresponding icons in the folder. For more details about *drawable*, reference: 
 http://developer.android.com/guide/practices/screens_support.html#overview
