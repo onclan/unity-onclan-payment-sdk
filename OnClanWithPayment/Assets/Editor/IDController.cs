@@ -17,6 +17,7 @@ public class IDController : EditorWindow {
 	static string _clientSecret;
 	static string _inAppApiKey;
 	static string _gameID;
+	static string _leaderboardID;
 	static string _sandboxApiKey;
 	static string _paymentState;
 	static string _noticeURL;
@@ -55,6 +56,7 @@ public class IDController : EditorWindow {
 		_clientSecret = AppotaSetting.ClientSecret;
 		_inAppApiKey = AppotaSetting.InAppApiKey;
 		_gameID = AppotaSetting.GameID;
+		_leaderboardID = AppotaSetting.LeaderboardID;
 		_sandboxApiKey = AppotaSetting.SandboxApiKey;
 		_paymentState = AppotaSetting.PaymentState;
 		_noticeURL = AppotaSetting.NoticeURL;
@@ -76,6 +78,7 @@ public class IDController : EditorWindow {
 			_sandboxApiKey = EditorGUILayout.TextField("Sandbox Api Key", _sandboxApiKey);
 			_clientID = EditorGUILayout.TextField("Client ID", _clientID);
 			_clientSecret = EditorGUILayout.TextField("Client Secret", _clientSecret);
+			_leaderboardID = EditorGUILayout.TextField("Leaderboard ID", _leaderboardID);
 			if (_isUseSandbox) GUI.backgroundColor = Color.green; else GUI.backgroundColor = Color.white;
 			
 			_isUseSandbox = EditorGUILayout.Toggle("Using Sandbox",_isUseSandbox);
@@ -142,6 +145,7 @@ public class IDController : EditorWindow {
 		AppotaSetting.InAppApiKey = _inAppApiKey;
 		AppotaSetting.ClientID = _clientID;
 		AppotaSetting.GameID = _gameID;
+		AppotaSetting.LeaderboardID = _leaderboardID;
 		AppotaSetting.ClientSecret = _clientSecret;
 		AppotaSetting.PaymentState = _paymentState;
 		AppotaSetting.SandboxApiKey = _sandboxApiKey;
