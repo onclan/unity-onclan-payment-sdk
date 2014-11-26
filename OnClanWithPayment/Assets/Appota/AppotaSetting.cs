@@ -67,6 +67,8 @@ public class AppotaSetting : ScriptableObject
 	[HideInInspector] [SerializeField]
 	private string gameID;
 	[HideInInspector] [SerializeField]
+	private string leaderboardID;
+	[HideInInspector] [SerializeField]
 	private string sandboxApiKey;
 	[HideInInspector] [SerializeField]
 	private string paymentState;
@@ -202,6 +204,19 @@ public class AppotaSetting : ScriptableObject
 			if (Instance.gameID != value)
 			{
 				Instance.gameID = value;
+				DirtyEditor();
+			}
+		}
+	}
+
+	public static string LeaderboardID
+	{
+		get { return Instance.leaderboardID; }
+		set
+		{
+			if (Instance.leaderboardID != value)
+			{
+				Instance.leaderboardID = value;
 				DirtyEditor();
 			}
 		}

@@ -76,8 +76,9 @@ public class OnClanSDKHandler {
 		AndroidJavaObject obj = new AndroidJavaObject("com.onclan.android.core.UnityHandler");
 		Debug.Log("Unity: Score: " + score);
 		// Call init sdk here
-		object[] args = new object[1];
-		args [0] = score;
+		object[] args = new object[2];
+		args [0] = AppotaSetting.LeaderboardID;
+		args [1] = score;
 		obj.CallStatic ("SubmitScore", args);
 	}
 	
