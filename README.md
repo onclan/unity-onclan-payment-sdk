@@ -16,7 +16,7 @@ Make sure you have the lastest UnityOnClanPaymentSDK.unitypackage. Open Unity, r
 ![](docs/vn/Appota_Import.png) </br>
 
 
-Bức ảnh cuối cùng hiển thị cấu trúc thư mục của OnClanPayment SDK. Bạn đã import thành công.
+The last photo showing the directory structure of the AppotaGameSDK. You've successfully imported.
 
 ####iOS platform: 
 To use the SDK for the iOS platform, you need to put all necessary frameworks in folder: Assets/Editor/XUPorter/Mods/iOS/Appota/ 
@@ -46,7 +46,7 @@ Config SDK
 
 ![](docs/vn/OnClan_Config_1.png) </br>
 
-Cửa sổ Setting được hiện ra, ta cần điền đầy đủ thông tin cấu hình vào từng mục
+Windows Setting is shown, should complete configuration information on each item.
 
 ![](docs/vn/OnCaln_Config_2.png) </br>
 
@@ -54,9 +54,12 @@ Configuration is divided into 3 separate sections:
 
 #### OnClan Settings
 
-- **Game ID**: is granted when register application on website http://developer.appota.com of Appota.
+- **Game ID (optional)**: contact Appota Game Supporter.
 - **Api Key**: is granted when register application on website http://developer.appota.com of Appota.
-- **Client ID**: Config on dev.appota.com 
+- **SandboxKey (optional)**: is granted when register application on website http://developer.appota.com of Appota.
+- **Client ID**: Config on dev.appota.com (use SANDBOX_CLIENT_ID in sandbox mode).
+- **Client Secret**: Config on dev.appota.com.
+- **Leaderboard ID**: contact Appota Game Supporter.
 
 #### Social Settings
 - **Facebook ID**: is granted when register application on website developer of Facebook: https://developers.facebook.com/ (contact Appota Supporter to create Facebook application or you can create your own application as instructed by developer site). 
