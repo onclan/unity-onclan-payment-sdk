@@ -187,7 +187,8 @@ public void OnPaymentSuccess(string transactionResult)
 }
 ```
 - <code>@transactionResult</code>: return with format: https://github.com/appota/ios-game-sdk/blob/master/payment_format
-**Setting Icon Game (Android platform only)**
+
+####Setting Icon Game (Android platform only)
 
 In Android platform, when developers use 3rd-party libraries, Unity will default replace game's icon with Android icon. To avoid this, moving icons game to folder Assets/Plugins/Android/res/drawable-xx 
 
