@@ -186,7 +186,7 @@ public void OnPaymentSuccess(string transactionResult)
 ```
 - <code>@transactionResult</code>: trả về theo định dạng: https://github.com/appota/ios-game-sdk/blob/master/payment_format
 
-**Cài đặt Icon Game (Android platform only)**
+####Cài đặt Icon Game (Android platform only)
 
 Đối với Android platform, khi nhà phát triển sử dụng thư viện của bên thứ 3, Unity sẽ mặc định lấy icon Android thay thế cho Icon của game. Để tránh điều này, bạn đặt icons game vào trong folder Assets/Plugins/Android/res/drawable-xx 
 
