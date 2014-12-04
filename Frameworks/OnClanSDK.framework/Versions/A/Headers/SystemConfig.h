@@ -17,6 +17,8 @@
 
 #define WIN_SIZE [UIScreen mainScreen].bounds.size
 
+#define WITH_TLS YES
+
 //#define LOADING_ICON                @"Icon.png"
 #define LOADING_EMOTICON            @"games.png"
 #define LOADING_AVATAR_PLADEHOLDER  @"avatar60.png"

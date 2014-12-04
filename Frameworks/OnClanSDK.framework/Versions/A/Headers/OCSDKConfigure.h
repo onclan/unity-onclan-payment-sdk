@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OCSDKConst.h"
+#import "OCUserInfo.h"
 
 //#define GAME_ID                 @"52a846fd479c19cf778b45e2"
 #define GAME_LEADERBOARD_ID     @"53b68227479c191d1f8b4649"
@@ -20,6 +21,21 @@
 
 #pragma mark - Variable
 @property (readwrite) BOOL disableAutoShowLogin;
+
+/*
+ *  default is YES. If set to NO, chat head can not move any more
+ */
+@property (nonatomic, assign) BOOL chatHeadDragable;
+
+/*
+ *  Default is YES. If set to NO, chat head can move freely without boucing to edge of screen
+ */
+@property (nonatomic, assign) BOOL bouncingEdge;
+
+/*
+ *  Default is YES. If set to NO, leaderboard will not show.
+ */
+@property (nonatomic, assign) BOOL isUseLeaderboard;
 
 #pragma mark - Config function
 /**
@@ -59,5 +75,9 @@
 + (BOOL) handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
 
 - (void) loginCallBack:(id) object;
+
+- (void)setChatHeadPosition:(CGPoint)center;
+
+- (OCUserInfo*)getUserInfo;
 
 @end

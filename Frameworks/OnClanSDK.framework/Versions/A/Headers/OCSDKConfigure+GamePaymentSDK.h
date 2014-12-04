@@ -14,4 +14,5 @@
 - (void) proceedGameSDKWithOCSDK;
 + (void) logoutPaymentGameSDK;
 + (BOOL) verifyGameSDKLoginDictAndUpdateInfo:(NSDictionary*) loginDict;
++ (BOOL) isGameSDKDebugMode;
 @end

@@ -14,12 +14,12 @@
 @interface OCSDKUserInfo : OCSDKBaseObject
 
 @property (nonatomic, readwrite) BOOL isLoggedIn;
-@property (nonatomic, strong) NSString *userId;
-@property (nonatomic, strong) NSString *aliasId;
-@property (nonatomic, strong) NSString *fullname;
-@property (nonatomic, strong) NSString *avatar;
-@property (nonatomic, strong) NSString *cover;
-@property (nonatomic, strong) NSString *level;
+@property (nonatomic, readonly) NSString *userId;
+@property (nonatomic, readonly) NSString *aliasId;
+@property (nonatomic, readonly) NSString *fullname;
+@property (nonatomic, readonly) NSString *avatar;
+@property (nonatomic, readonly) NSString *cover;
+@property (nonatomic, readonly) NSString *level;
 @property (nonatomic, strong) OCSDKLeaderBoardPlayerObject *leaderboardPlayerObject;
 
 +(OCSDKUserInfo *) sharedUser;
