@@ -48,7 +48,6 @@ Configuration is divided into 3 separate sections:
 
 #### OnClan Settings
 
-- **Game ID (optional)**: contact Appota Game Supporter.
 - **Api Key**: is granted when register application on website http://developer.appota.com of Appota.
 - **SandboxKey (optional)**: is granted when register application on website http://developer.appota.com of Appota.
 - **Client ID**: Config on dev.appota.com (use SANDBOX_CLIENT_ID in sandbox mode).
