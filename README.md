@@ -26,12 +26,6 @@ To use the SDK for the iOS platform, you need to put all necessary frameworks in
 In folder Frameworks/
 > FacebookSDK.framework
 >
-> GoogleOpenSource.framework
->
-> GooglePlus.bundle	
->
-> GooglePlus.framework
->
 > OnClanBundle.bundle
 >
 > OnClanSDK.framework
@@ -79,7 +73,8 @@ Configuration is divided into 3 separate sections:
 >
 > ![](docs/vn/OnClan_Twitter_Detail.png) </br>
 
-- **Google Client ID**: is granted when register application on website https://developers.google.com/+/mobile/ (contact Appota Supporter to create Facebook application or you can create your own application as instructed by developer site).
+- **Google Client ID**: is granted when register application on website https://developers.google.com/+/mobile/ (contact Appota Supporter to create Google application or you can create your own application as instructed by developer site).
+- **Google Client Secret**: is granted when register application on Google developer page.
 
 > ![](docs/vn/OnClan_Google_Client_Id.png) </br>
 >
