@@ -26,12 +26,6 @@ Bức ảnh cuối cùng hiển thị cấu trúc thư mục của OnClanPayment
 Trong folder Frameworks/
 > FacebookSDK.framework
 >
-> GoogleOpenSource.framework
->
-> GooglePlus.bundle	
->
-> GooglePlus.framework
->
 > OnClanBundle.bundle
 >
 > OnClanSDK.framework
@@ -80,6 +74,7 @@ Cấu hình được phân chia làm 3 mục riêng biệt:
 > ![](docs/vn/OnClan_Twitter_Detail.png) </br>
 
 - **Google Client ID**: nhận Google Client ID từ việc đăng ký tạo ứng dụng trên trang Developer của Google theo hướng dẫn https://developers.google.com/+/mobile/ios/getting-started (liên hệ với Appota Game team để tạo ứng dụng hoặc bạn có thể tự tạo ứng dụng của riêng mình) 
+- **Google Client Secret**: nhận được khi đăng ký tạo ứng dụng trên trang Developer của Google.
 
 > ![](docs/vn/OnClan_Google_Client_Id.png) </br>
 >
