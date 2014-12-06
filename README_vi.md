@@ -48,7 +48,6 @@ Cấu hình được phân chia làm 3 mục riêng biệt:
 
 #### OnClan Settings
 
-- **Game ID (optional)**: id tương ứng với game của nhà phát triển, liên hệ với Appota Game Supporter để nhận key.
 - **Api Key**: liên hệ với Appota Game Supporter để nhận được key.
 - **SandboxKey (optional)**: được cấp khi đăng kí ứng dụng trên trang developer của Appota.
 - **Client ID**: Cấu hình trên dev.appota.com (dùng SANDBOX_CLIENT_ID trong chế độ sandbox).
