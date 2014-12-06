@@ -30,7 +30,7 @@ public static class XCodePostProcess
 		}
 
 		// Config while building project
-		PlistMod.UpdatePlist(pathToBuiltProject, AppotaSetting.ClientID, AppotaSetting.FacebookAppID, AppotaSetting.TwitterConsumerKey, AppotaSetting.TwitterConsumerSecret, AppotaSetting.GoogleClientId);
+		PlistMod.UpdatePlist(pathToBuiltProject, AppotaSetting.ClientID, AppotaSetting.FacebookAppID, AppotaSetting.TwitterConsumerKey, AppotaSetting.TwitterConsumerSecret, AppotaSetting.GoogleClientId, AppotaSetting.GoogleClientSecretId);
 		AppControllerMod.UpdateUnityAppController(pathToBuiltProject);
 
 		//TODO implement generic settings as a module option

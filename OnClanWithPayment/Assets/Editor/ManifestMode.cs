@@ -14,7 +14,6 @@ public class ManifestMod
 	public const string TwitterKeyMetaDataName = "com.appota.twitter.consumer.key";
 	public const string TwitterSecretMetaDataName = "com.appota.twitter.consumer.secret";
 	public const string OnClanAPIKeyMetaDataName = "com.appota.apiKey";
-	public const string OnClanGameIDMetaDataName = "com.onclan.gameId";
 
 	public static void GenerateManifest()
 	{
@@ -130,17 +129,7 @@ public class ManifestMod
 			OnClanElement.SetAttribute("name", ns, OnClanAPIKeyMetaDataName);
 			dict.AppendChild(OnClanElement);
 		}
-		OnClanElement.SetAttribute("value", ns, "" + AppotaSetting.InAppApiKey);  
-
-		// Add OnClanGameID
-		XmlElement OnClanGameIDElement = FindElementWithAndroidName("meta-data", "name", ns, OnClanGameIDMetaDataName, dict);
-		if (OnClanGameIDElement == null)
-		{
-			OnClanGameIDElement = doc.CreateElement("meta-data");
-			OnClanGameIDElement.SetAttribute("name", ns, OnClanGameIDMetaDataName);
-			dict.AppendChild(OnClanGameIDElement);
-		}
-		OnClanGameIDElement.SetAttribute("value", ns, "" + AppotaSetting.GameID); 
+		OnClanElement.SetAttribute("value", ns, "" + AppotaSetting.InAppApiKey);   
 
 		// Edit Sandbox meta
 		XmlElement SandboxElement = FindElementWithAndroidName("meta-data", "name", ns, "sandbox", dict);

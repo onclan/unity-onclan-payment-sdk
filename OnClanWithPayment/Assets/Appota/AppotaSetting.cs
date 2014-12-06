@@ -65,8 +65,6 @@ public class AppotaSetting : ScriptableObject
 	[HideInInspector] [SerializeField]
 	private string inAppApiKey;
 	[HideInInspector] [SerializeField]
-	private string gameID;
-	[HideInInspector] [SerializeField]
 	private string leaderboardID;
 	[HideInInspector] [SerializeField]
 	private string sandboxApiKey;
@@ -195,20 +193,7 @@ public class AppotaSetting : ScriptableObject
 			}
 		}
 	}
-
-	public static string GameID
-	{
-		get { return Instance.gameID; }
-		set
-		{
-			if (Instance.gameID != value)
-			{
-				Instance.gameID = value;
-				DirtyEditor();
-			}
-		}
-	}
-
+	
 	public static string LeaderboardID
 	{
 		get { return Instance.leaderboardID; }

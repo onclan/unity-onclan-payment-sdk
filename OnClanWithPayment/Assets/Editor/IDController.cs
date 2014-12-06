@@ -16,7 +16,6 @@ public class IDController : EditorWindow {
 	static string _clientID;
 	static string _clientSecret;
 	static string _inAppApiKey;
-	static string _gameID;
 	static string _leaderboardID;
 	static string _sandboxApiKey;
 	static string _paymentState;
@@ -55,7 +54,6 @@ public class IDController : EditorWindow {
 		_clientID = AppotaSetting.ClientID;
 		_clientSecret = AppotaSetting.ClientSecret;
 		_inAppApiKey = AppotaSetting.InAppApiKey;
-		_gameID = AppotaSetting.GameID;
 		_leaderboardID = AppotaSetting.LeaderboardID;
 		_sandboxApiKey = AppotaSetting.SandboxApiKey;
 		_paymentState = AppotaSetting.PaymentState;
@@ -73,7 +71,6 @@ public class IDController : EditorWindow {
 
 	    if (PenaltyEditorTools.DrawHeader("OnClan Settings"))
 	    {
-			_gameID = EditorGUILayout.TextField("Game ID", _gameID);
             _inAppApiKey = EditorGUILayout.TextField("API Key", _inAppApiKey);
 			_sandboxApiKey = EditorGUILayout.TextField("Sandbox Api Key", _sandboxApiKey);
 			_clientID = EditorGUILayout.TextField("Client ID", _clientID);
@@ -144,7 +141,6 @@ public class IDController : EditorWindow {
 		AppotaSetting.GoogleClientSecretId = _googleSecretID;
 		AppotaSetting.InAppApiKey = _inAppApiKey;
 		AppotaSetting.ClientID = _clientID;
-		AppotaSetting.GameID = _gameID;
 		AppotaSetting.LeaderboardID = _leaderboardID;
 		AppotaSetting.ClientSecret = _clientSecret;
 		AppotaSetting.PaymentState = _paymentState;

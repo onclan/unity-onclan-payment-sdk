@@ -58,7 +58,7 @@ public class PlistMod
 		return "";
 	}
     
-	public static void UpdatePlist(string path, string clientID, string fbAppId, string twitterConsumerKey, string twitterConsumerSecret, string googleClientID)
+	public static void UpdatePlist(string path, string clientID, string fbAppId, string twitterConsumerKey, string twitterConsumerSecret, string googleClientID, string googleClientSecret)
     {
         const string fileName = "Info.plist";
         string fullPath = Path.Combine(path, fileName);
@@ -73,9 +73,9 @@ public class PlistMod
 			Debug.LogError("You didn't specify a Twitter Consummer Key or Secret Key.");
 		}
 
-		if(string.IsNullOrEmpty(googleClientID) || fbAppId.Equals("0"))
+		if(string.IsNullOrEmpty(googleClientID) || string.IsNullOrEmpty(googleClientSecret))
 		{
-			Debug.LogError("You didn't specify a Google Client ID.");
+			Debug.LogError("You didn't specify a Google Client ID or Google Client Secret.");
 		}
         
         var doc = new XmlDocument();
@@ -122,6 +122,12 @@ public class PlistMod
 		{
 			AddChildElement(doc, dict, "key", "GOOGLE_CLIENT_ID");
 			AddChildElement(doc, dict, "string", googleClientID);
+		}
+
+		if(!HasKey(dict, "GOOGLE_CLIENT_SECRET"))
+		{
+			AddChildElement(doc, dict, "key", "GOOGLE_CLIENT_SECRET");
+			AddChildElement(doc, dict, "string", googleClientSecret);
 		}
         
 
