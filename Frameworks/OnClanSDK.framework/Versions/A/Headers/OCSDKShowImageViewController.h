@@ -19,5 +19,4 @@
 - (void)displayImage;
 
 + (void) showFullScreenImageWithURLString:(NSString*) urlString;
-+ (void) showLocalFullScreenImage:(NSString*) imageFilePath;
 @end

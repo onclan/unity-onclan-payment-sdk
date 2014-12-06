@@ -15,8 +15,7 @@
 @class AppotaPaymentLoginDialog;
 @class AppotaGamePaymentDialogView;
 @class AppotaGameView;
-@protocol GPPSignInDelegate;
-@interface AppotaUtil : NSObject<GPPSignInDelegate> {
+@interface AppotaUtil : NSObject{
     
 }
 +(AppotaUtil *)sharedUtil;
@@ -38,6 +37,8 @@
                           withSMSStructureDict:(NSDictionary*) smsDict;
 + (NSArray*) getListSMSOptionWithSMSPayment:(NSArray*) listSMSPayment
                        withSMSStructureDict:(NSDictionary*) smsDict;
++ (BOOL) verifyPhoneNumber:(NSString*) phoneNumber
+                 withAlert:(BOOL) enableAlert;
 +(void) alertWithTitle:(NSString*) alertTitle
            withMessage:(NSString*) alertMessage;
 + (UIView*) getSMSViewWithText:(NSString*) smsText
@@ -48,6 +49,7 @@
 + (NSDictionary*) getAttributeFontDictionaryWithFontSize:(float) fontSize
                                                 fontName:(NSString*) fontName;
 
++ (void) setLanguageForView:(UIView*) v enablePrevBundle:(BOOL) enablePrevBundle;
 + (void) setLanguageForView:(UIView*) v;
 + (void) deleteLinkedDeviceUserInfo:(NSDictionary*) userInfoDict;
 + (NSDictionary*) getRemoteConfigDict;
@@ -105,8 +107,5 @@
 + (NSString *)systemVersion;
 + (BOOL) isDeviceIpad;
 + (UIInterfaceOrientation) appotaGetDeviceOrientation;
-
-#pragma mark - Unity support function
-+ (NSString*) getStringFromDictionay:(NSDictionary*) dict;
 @end
 

@@ -55,7 +55,7 @@
 #define AVAIABLE_STORE_URL @"http://api.appota.com/client/checkavaionstore"
 
 #define APPOTA_SDK_VERSION @"1.0"
-#define APPOTA_SDK_BUILD 23
+#define APPOTA_SDK_BUILD 25
 
 #define ITEM_INAPP_LIST @"https://api.appota.com/item/get_list?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define ITEM_INAPP_CHECKBOUGHT_LIST @"https://api.appota.com/item/bought?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
@@ -94,7 +94,7 @@
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
-#define DEBUG_MODE NO
+#define APPOTA_DEBUG_MODE NO
 
 #define APPOTA_CLOSE_PUSH_KEY @"appota_post_close_notification"
 

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 static NSString *OCSDK_FBLoginErrorDomain = @"ocsdk_fblogin_error_domain";
+static NSString *OCSDKDomain = @"ocsdk";
 
 @interface OCSDKErrorUltility : NSObject
 
@@ -16,5 +17,5 @@ static NSString *OCSDK_FBLoginErrorDomain = @"ocsdk_fblogin_error_domain";
 +(NSError*) errorWithKey:(NSString*) key;
 +(NSError*) errorWithKey:(NSString*) key withMessage:(NSString*) message;
 +(NSError*) errorWithKey:(NSString*) key withUserInfo:(NSDictionary*) errorInfo;
-
++(NSError*) errorWithMessage:(NSString*) message;
 @end

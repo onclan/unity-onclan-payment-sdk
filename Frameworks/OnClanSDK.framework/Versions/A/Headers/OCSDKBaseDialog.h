@@ -12,13 +12,21 @@
 
 @interface OCSDKBaseDialog : UIView <UIWebViewDelegate, UIScrollViewDelegate> {
 
+    NSURLRequest *_serverRequest;
+    NSURL* _serverURL;
+    UIWebView* _webView;
+    UIActivityIndicatorView* _spinner;
+    UIImageView *_loadingView;
+    
+    UIButton* _closeButton;
     UIInterfaceOrientation _orientation;
     BOOL _showingKeyboard;
     BOOL _isViewInvisible;
     
     CGFloat kPadding;
+    CGFloat kWebPadding;
     CGFloat kBorderWidth;
-
+    
     
     // Ensures that UI elements behind the dialog are disabled.
     UIView* _modalBackgroundView;
@@ -28,10 +36,14 @@
  */
 @property(nonatomic, assign) id<AppotaDialogDelegate> delegate;
 
+-(void)setPadding:(float)padding borderWidth:(float)width;
+
 - (void) showWithAnimation:(BOOL) animated;
 - (void)show;
 - (void)cancel;
 - (void) hideOrShowViewWithState:(BOOL) hideState;
+- (void)showSpinner;
+- (BOOL) isAjaxRequest:(NSURLRequest*) request ;
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
