@@ -18,6 +18,7 @@
     IBOutlet UITextField *emailTextField;
     IBOutlet UIButton *updateButton;
     IBOutlet UIButton *cancelButton;
+    IBOutlet UIButton *logoutButton;
     IBOutlet UIImageView *passwordBackgroundImageView;
     IBOutlet UIImageView *emailBackgroundImageView;    
     IBOutlet UIImageView *usernameBackgroundImageView;

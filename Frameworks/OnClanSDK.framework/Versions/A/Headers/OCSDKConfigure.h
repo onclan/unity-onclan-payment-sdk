@@ -37,6 +37,8 @@
  */
 @property (nonatomic, assign) BOOL isUseLeaderboard;
 
+@property (nonatomic, assign) BOOL logoutButtonHidden;
+
 #pragma mark - Config function
 /**
  *  Config function called when init app

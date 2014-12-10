@@ -20,4 +20,6 @@
 
 -(NSDictionary*)toDictionary;
 
+-(NSString *)toJsonString;
+
 @end

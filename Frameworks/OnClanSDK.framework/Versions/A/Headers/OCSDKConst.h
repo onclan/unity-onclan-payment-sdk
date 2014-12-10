@@ -18,10 +18,9 @@
 //#define WITH_TLS YES
 
 #ifdef OCSDK_DEBUG
-#define OCLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
-#ifndef OCSDK_DEBUG
-#define OCLog(fmt, ...)
-#endif
+#define OCSDKLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define OCSDKLog(fmt, ...)
 #endif
 
 typedef enum
@@ -53,8 +52,8 @@ typedef void (^OCSDKErrorBlock) (NSError *error);
 typedef void (^OCSDKViewHandler) (OCSDKViewAction action);
 typedef void (^OCSDKObjectHandler) (id object, NSError *error , NSString *message);
 
-#define OC_SDK_VERSION @"1.5"
-#define OC_SDK_BUILD @"5"
+#define OC_SDK_VERSION @"1.7"
+#define OC_SDK_BUILD @"7"
 #define OCSDK_API_VERSION @"1.0"
 
 #define ONCLAN_APP_SCHEMA @"onclan"

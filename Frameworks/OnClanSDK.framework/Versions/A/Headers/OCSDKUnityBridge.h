@@ -24,4 +24,16 @@ extern "C" {
     void _OCSDKMakePayment();
     
     void _OCSDKSetDisableAutoLogin(BOOL disableAutoLogin);
+    
+    BOOL _OCSDKCheckUserLoggedIn();
+    
+    char* _OCSDKGetUserInfo();
+    
+    void _OCSDKSetChatHeadDragable(BOOL value);
+    
+    void _OCSDKSetChatHeadBoucingEdge(BOOL value);
+    
+    void _OCSDKSetChatHeadPosition(float x, float y);
+    
+    void _OCSDKSetLogoutButtonHidden(BOOL value);
 }
