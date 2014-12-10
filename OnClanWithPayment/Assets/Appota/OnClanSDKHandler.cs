@@ -45,7 +45,25 @@ public class OnClanSDKHandler {
 	
 	[DllImport("__Internal")]
 	private static extern void _OCSDKConfigure(string apiKey);
+
+	[DllImport("__Internal")]
+	private static extern bool _OCSDKCheckUserLoggedIn();
 	
+	[DllImport("__Internal")]
+	private static extern string _OCSDKGetUserInfo();
+	
+	[DllImport("__Internal")]
+	private static extern void _OCSDKSetChatHeadDragable(bool value);
+	
+	[DllImport("__Internal")]
+	private static extern void _OCSDKSetChatHeadBoucingEdge(bool value);
+	
+	[DllImport("__Internal")]
+	private static extern void _OCSDKSetChatHeadPosition(float x, float y);
+	
+	[DllImport("__Internal")]
+	private static extern void _OCSDKSetLogoutButtonHidden(bool value);
+
 	public void PostScore(int score){
 		Debug.Log ("Start posting score");
 		_OCSDKPostScore (score);
@@ -65,9 +83,26 @@ public class OnClanSDKHandler {
 		}
 	}	
 	
-	public void MakePayment() {
-		_OCSDKMakePayment ();
+	public string GetUserInfo() {
+		return _OCSDKGetUserInfo ();
 	}
+	
+	public void SetChatHeadDragable(bool value) {
+		_OCSDKSetChatHeadDragable (value);
+	}
+	
+	public void SetChatHeadBoucingEdge(bool value) {
+		_OCSDKSetChatHeadBoucingEdge (value);
+	}
+	
+	public void SetChatHeadPosition(float x, float y) {
+		_OCSDKSetChatHeadPosition (x, y);
+	}
+	
+	public void EnableLogout(bool value) {
+		_OCSDKSetLogoutButtonHidden (!value);
+	}
+
 	#endif
 
 	#if UNITY_ANDROID
@@ -117,8 +152,11 @@ public class OnClanSDKHandler {
 		}
 	}	
 	
-	public void MakePayment() {
-
+	public void EnableLogout(bool enableLogout) {
+		AndroidJavaObject obj = new AndroidJavaObject("com.onclan.android.core.UnityHandler");
+		object[] args = new object[1];
+		args [0] = enableLogout;
+		obj.CallStatic ("EnableLogout", args);
 	}
 
 	public void Logout() {
