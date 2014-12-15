@@ -52,8 +52,8 @@ typedef void (^OCSDKErrorBlock) (NSError *error);
 typedef void (^OCSDKViewHandler) (OCSDKViewAction action);
 typedef void (^OCSDKObjectHandler) (id object, NSError *error , NSString *message);
 
-#define OC_SDK_VERSION @"1.7"
-#define OC_SDK_BUILD @"7"
+#define OC_SDK_VERSION @"1.8"
+#define OC_SDK_BUILD @"8"
 #define OCSDK_API_VERSION @"1.0"
 
 #define ONCLAN_APP_SCHEMA @"onclan"

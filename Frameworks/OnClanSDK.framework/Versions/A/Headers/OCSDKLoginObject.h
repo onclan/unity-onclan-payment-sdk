@@ -12,4 +12,5 @@
 @interface OCSDKLoginObject : OCSDKBaseObject
 - (NSString*) getAccessToken;
 - (NSString*) getUserName;
+- (NSString*) getEmail;
 @end
