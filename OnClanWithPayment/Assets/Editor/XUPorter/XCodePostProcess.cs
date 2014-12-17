@@ -18,6 +18,17 @@ public static class XCodePostProcess
 			return;
 		}
 
+		string OnClanBundlePath = Application.dataPath + "/Editor/XUPorter/Mods/iOS/Appota/OnClanBundle.bundle";
+		string OnClanFrameworkPath = Application.dataPath + "/Editor/XUPorter/Mods/iOS/Appota/OnClanSDK.framework";
+		string AppotaBundlePath = Application.dataPath + "/Editor/XUPorter/Mods/iOS/Appota/AppotaBundle.bundle";
+		string AppotaFrameworkPath = Application.dataPath + "/Editor/XUPorter/Mods/iOS/Appota/AppotaSDK.framework";
+		string FacebookFrameworkPath = Application.dataPath + "/Editor/XUPorter/Mods/iOS/Appota/FacebookSDK.framework";
+		
+		if (!Directory.Exists(OnClanBundlePath) || !Directory.Exists(OnClanFrameworkPath) || !Directory.Exists(FacebookFrameworkPath) || !Directory.Exists(AppotaBundlePath) || !Directory.Exists(AppotaFrameworkPath)){
+			EditorUtility.DisplayDialog("Warning", "Missing frameworks! Please read documents again and put all necessary frameworks in folder: \nAssets/Editor/XUPorter/Mods/iOS/Appota/", "Ok");
+			return;
+		}
+
 		// Create a new project object from build target
 		XCProject project = new XCProject( pathToBuiltProject );
 
