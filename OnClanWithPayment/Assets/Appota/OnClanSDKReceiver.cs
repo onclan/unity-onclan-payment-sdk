@@ -40,7 +40,12 @@ public class OnClanSDKReceiver : MonoBehaviour {
 			Debug.Log("Did start init game object");
 		}
 	}
-	
+
+	public void OnInitSDKSuccess()
+	{
+		Debug.Log ("OnClanSDKReceiver: Did Init SDK");
+	}
+
 	public void OnLoginSuccess(string appotaSession)
 	{
 		Debug.Log ("OnClanSDKReceiver: Did login");
