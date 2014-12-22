@@ -8,18 +8,7 @@
 
 #import "OCSDKLoginObject.h"
 
-typedef enum {
-    OCSDKLoginGameNormalType,
-    OCSDKLoginGameQuickType,
-    OCSDKLoginGameFBType,
-    OCSDKLoginGameTWType,
-    OCSDKLoginGameGGType,
-    OCSDKLoginGameOCType,
-} OCSDKLoginGameType;
-
 @interface OCSDKLoginGameObject : OCSDKLoginObject
-@property (readwrite) OCSDKLoginGameType gameType;
-- (NSString*) getQuickLoginAccessToken;
-- (OCSDKLoginGameType) getLoginGameType;
-- (BOOL) isQuickLogin;
+- (NSString*) getGameLoginAccessToken;
+- (BOOL) isRequireUpdatePassword;
 @end

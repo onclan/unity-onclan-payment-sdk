@@ -78,4 +78,11 @@
 #define SOCIAL_PHOTO_IMAGE_UPLOAD @"https://app.appota.com/v1.1/games/%@/photos?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define SOCIAL_LIST_CLAN_OF_USER @"https://app.appota.com/users/%@/clans?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 
+#pragma mark Check web list
+
+#define CHECK_WEB_GAME_WALL @"https://app.appota.com/v1.1/games/%@?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
+#define CHECK_WEB_CLAN_WALL @"https://app.appota.com/v1.1/clans/%@?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
+#define CHECK_WEB_USER_WALL @"https://app.appota.com/v1.1/users/%@?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
+#define CHECK_WEB_ALIAS_WALL @"https://app.appota.com/v1.1/alias/%@?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
+
 #endif

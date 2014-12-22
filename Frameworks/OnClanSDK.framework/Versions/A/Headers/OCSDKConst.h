@@ -10,7 +10,7 @@
 #define OCSDK_OCSDKConst_h
 
 
-//#define OCSDK_DEBUG YES
+#define OCSDK_DEBUG YES
 
 #define UNITY_DEPLOYMENT YES
 //#define PAYMENT_SDK_SUPPORT YES
@@ -52,8 +52,8 @@ typedef void (^OCSDKErrorBlock) (NSError *error);
 typedef void (^OCSDKViewHandler) (OCSDKViewAction action);
 typedef void (^OCSDKObjectHandler) (id object, NSError *error , NSString *message);
 
-#define OC_SDK_VERSION @"1.8"
-#define OC_SDK_BUILD @"8"
+#define OC_SDK_VERSION @"1.9"
+#define OC_SDK_BUILD @"9"
 #define OCSDK_API_VERSION @"1.0"
 
 #define ONCLAN_APP_SCHEMA @"onclan"

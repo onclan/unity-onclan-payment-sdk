@@ -46,5 +46,5 @@
                     withErrorBlock:(OCSDKErrorBlock) errorBlock;
 
 - (id) handleLoginObjectFromDict:(NSDictionary*) dict;
-- (id) handleQuickLoginObject:(id) quickLoginObject;
+- (id) handleGameLoginObject:(id) quickLoginObject;
 @end

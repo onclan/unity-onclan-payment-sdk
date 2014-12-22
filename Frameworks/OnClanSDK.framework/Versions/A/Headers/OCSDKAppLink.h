@@ -21,25 +21,25 @@
 
 + (NSString*)getAuthorizeLink;
 
-+ (NSString*)getOpenUserLinkWithId:(NSString*)userId;
++ (void)getOpenUserLinkWithId:(NSString*)userId withComplete:(OCSDKStringBlock)completionBlock;
 
-+ (NSString*)getOpenUpdateInfoLinkWithId:(NSString*)userId;
++ (void)getOpenUpdateInfoLinkWithId:(NSString*)userId withComplete:(OCSDKStringBlock)completionBlock;
 
-+ (NSString*)getOpenAliasLinkWithId:(NSString*)aliasId;
++ (void)getOpenAliasLinkWithId:(NSString*)aliasId withComplete:(OCSDKStringBlock)completionBlock;
 
-+ (NSString*)getOpenGameLinkWithId:(NSString*)gameId;
++ (void)getOpenGameLinkWithId:(NSString*)gameId withComplete:(OCSDKStringBlock)completionBlock;
 
-+ (NSString*)getOpenCreateClanLinkWithGameId:(NSString*)gameId;
++ (void)getOpenCreateClanLinkWithGameId:(NSString*)gameId withComplete:(OCSDKStringBlock)completionBlock;
 
-+ (NSString*)getOpenChatLinkWithId:(NSString*)topicId;
++ (void)getOpenChatLinkWithId:(NSString*)topicId withComplete:(OCSDKStringBlock)completionBlock;
 
-+ (NSString*)getOpenClanLinkWithId:(NSString*)clanId;
++ (void)getOpenClanLinkWithId:(NSString*)clanId withComplete:(OCSDKStringBlock)completionBlock;
 
-+ (NSString*)getOpenPostLinkWithId:(NSString*)postId;
++ (void)getOpenPostLinkWithId:(NSString*)postId withComplete:(OCSDKStringBlock)completionBlock;
 
 + (NSString*)getOpenShopLink;
 
-+ (NSString*) getInviteFriendLinkWithId:(NSString*) gameId withGameName:(NSString*) gameName;
++ (void) getInviteFriendLinkWithId:(NSString*) gameId withGameName:(NSString*) gameName withComplete:(OCSDKStringBlock)completionBlock;
 
 + (NSString*)getOpenStickyWithId:(NSString*)stickyId;
 

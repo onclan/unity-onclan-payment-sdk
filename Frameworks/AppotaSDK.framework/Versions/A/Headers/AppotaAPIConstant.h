@@ -84,7 +84,7 @@
 
 #define GAPOTA_TRACKING_URL @"http://www.google-analytics.com/collect"
 
-#define DEFAULT_GG_CLIENT_ID @"242204253141.apps.googleusercontent.com"
+#define DEFAULTUp_GG_CLIENT_ID @"242204253141.apps.googleusercontent.com"
 
 #define IS_IOS6_AND_UP ([[UIDevice currentDevice].systemVersion floatValue] >= 6.0)
 

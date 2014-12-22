@@ -27,4 +27,20 @@
                onComplete:(OCSDKDictionaryBlock) completionBlock
                   onError:(OCSDKErrorBlock) errorBlock;
 
+-(void)checkOpenWebGameWithId:(NSString*)gameId
+                   onComplete:(OCSDKDictionaryBlock) completionBlock
+                      onError:(OCSDKErrorBlock) errorBlock;
+
+-(void)checkOpenWebUserWallWithId:(NSString*)userId
+                       onComplete:(OCSDKDictionaryBlock) completionBlock
+                          onError:(OCSDKErrorBlock) errorBlock;
+
+-(void)checkOpenWebAliasWithId:(NSString*)aliasId
+                    onComplete:(OCSDKDictionaryBlock) completionBlock
+                       onError:(OCSDKErrorBlock) errorBlock;
+
+-(void)checkOpenWebClanWithId:(NSString*)clanId
+                   onComplete:(OCSDKDictionaryBlock) completionBlock
+                      onError:(OCSDKErrorBlock) errorBlock;
+
 @end
