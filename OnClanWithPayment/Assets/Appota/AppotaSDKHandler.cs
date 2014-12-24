@@ -80,6 +80,8 @@ public class AppotaSDKHandler {
 	[DllImport("__Internal")]
 	private static extern bool isUserLogin();
 
+	[DllImport("__Internal")]
+	private static extern string getUserID();
 
 	public void Init(){
 		Init (AppotaSetting.ClientID, AppotaSetting.ClientSecret, AppotaSetting.InAppApiKey, AppotaSetting.PaymentState, AppotaSetting.NoticeURL, AppotaSetting.ConfigURL);
@@ -157,6 +159,9 @@ public class AppotaSDKHandler {
 		return isUserLogin();
 	}
 
+	public string GetUserID() {
+		return getUserID();
+	}
 
 #endif
 #if UNITY_ANDROID
@@ -227,6 +232,10 @@ public class AppotaSDKHandler {
 	public bool IsUserLogin() {
 		cls_AppotaUnityHandler = new AndroidJavaClass("com.appota.gamesdk.unity.UnityHandler");
 		return cls_AppotaUnityHandler.CallStatic<bool>("IsUserLogin");
+	}
+
+	public string GetUserID() {
+		return OnClanSDKHandler.UserID;
 	}
 
 	public void SetState(string paymentState) {

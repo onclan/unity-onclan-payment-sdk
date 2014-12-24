@@ -43,6 +43,7 @@ public class OnClanSDKReceiver : MonoBehaviour {
 
 	public void OnInitSDKSuccess()
 	{
+		OnClanSDKHandler.Instance.EnableLogout(false);
 		Debug.Log ("OnClanSDKReceiver: Did Init SDK");
 	}
 
@@ -63,13 +64,6 @@ public class OnClanSDKReceiver : MonoBehaviour {
 	{
 		Debug.Log ("OnClanSDKReceiver: Did payment");
 		Debug.Log(transactionResult);
-		//		var jsonResult = SimpleJSON.JSON.Parse (transactionResult);
-		if (transactionResult != null) {
-			int amount = int.Parse (transactionResult);
-			int coin = PlayerPrefs.GetInt ("coin");
-			PlayerPrefs.SetInt ("coin", coin + amount);
-		}
-		//		
 	}
 	
 	public void OnSwitchAccountSuccess(string appotaSession)

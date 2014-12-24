@@ -120,6 +120,10 @@ extern "C" {
 	const bool isUserLogin(){
 		return [AppotaGameSDKConfigure checkUserLogin];
 	}
+	
+	const char* getUserID() {
+        return [[AppotaGameSDKConfigure getUserID] UTF8String];
+    }
 }
 
 #pragma mark - Gameconfig delegate

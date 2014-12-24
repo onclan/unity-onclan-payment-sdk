@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 public class OnClanSDKHandler {
 	private string appotaApiKey;
 	private string onClanUser;
+	private string userID;
 	private bool isInitOnClanHandler;
 
 	// Use this for initialization
@@ -188,6 +189,18 @@ public class OnClanSDKHandler {
 			if (Instance.onClanUser != value)
 			{
 				Instance.onClanUser = value;
+			}
+		}
+	}
+
+	public static string UserID
+	{
+		get { return Instance.userID; }
+		set
+		{
+			if (Instance.userID != value)
+			{
+				Instance.userID = value;
 			}
 		}
 	}
