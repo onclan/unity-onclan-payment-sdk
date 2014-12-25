@@ -87,7 +87,9 @@ public class IDController : EditorWindow {
 	    if (PenaltyEditorTools.DrawHeader("Social Settings"))
 	    {
 			_facebookID = EditorGUILayout.TextField("Facebook ID", _facebookID);
+			#if UNITY_WP8
 			_facebookSecretID = EditorGUILayout.TextField("Facebook Secret ID", _facebookSecretID);
+			#endif
 			_twitterKey = EditorGUILayout.TextField("Twitter Key", _twitterKey);
 			_twitterSecret = EditorGUILayout.TextField("Twitter Secret", _twitterSecret);
 			_googleID = EditorGUILayout.TextField("Google Client ID", _googleID);

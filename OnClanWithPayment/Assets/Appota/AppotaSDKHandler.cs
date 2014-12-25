@@ -88,8 +88,26 @@ public class AppotaSDKHandler {
 	}
 
 	public void Init(string clientId, string clientSecret, string inAppApiKey, string paymentState, string noticeURL, string configURL) {
-		if(string.IsNullOrEmpty(clientId) || string.IsNullOrEmpty(clientSecret) || string.IsNullOrEmpty(inAppApiKey) || string.IsNullOrEmpty(paymentState) || string.IsNullOrEmpty(noticeURL) || string.IsNullOrEmpty(configURL))
-			Debug.LogError("Missing ID. Please check your ID Setting.");
+
+		if(string.IsNullOrEmpty(clientId)){
+			Debug.LogError("Missing Client ID. Please check your ID Setting.");
+		} else
+		if (string.IsNullOrEmpty(clientSecret)){
+			Debug.LogError("Missing Client Secret ID. Please check your ID Setting.");
+		} else 
+		if (string.IsNullOrEmpty(inAppApiKey)){
+			Debug.LogError("Missing ApiKey. Please check your ID Setting.");
+		} else 
+		if (string.IsNullOrEmpty(paymentState)){
+			paymentState = "";
+		} else 
+		if (string.IsNullOrEmpty(noticeURL)){
+			Debug.LogError("Missing NoticeUrl. Please check your ID Setting.");
+		} else 
+		if (string.IsNullOrEmpty(configURL)){
+			Debug.LogError("Missing ConfigUrl. Please check your ID Setting.");
+		}
+
 		AppotaSDKReceiver.InitializeGameObjects ();
 		configSDK (clientId, clientSecret, inAppApiKey, paymentState, noticeURL, configURL);
 		// Custom AppotaSDKConfig
@@ -174,8 +192,20 @@ public class AppotaSDKHandler {
 	}
 
 	public void Init(string apiKey, string sandboxApiKey, string noticeURL, string configURL) {
-		if(string.IsNullOrEmpty(apiKey) || string.IsNullOrEmpty(sandboxApiKey) || string.IsNullOrEmpty(noticeURL) || string.IsNullOrEmpty(configURL))
-			Debug.LogError("Missing ID. Please check your ID Setting.");
+
+		if(string.IsNullOrEmpty(apiKey)){
+			Debug.LogError("Missing Apikey. Please check your ID Setting.");
+		} else
+		if(string.IsNullOrEmpty(sandboxApiKey)){
+			sandboxApiKey = "";
+		} else
+		if (string.IsNullOrEmpty(noticeURL)){
+			Debug.LogError("Missing NoticeUrl. Please check your ID Setting.");
+		} else 
+		if (string.IsNullOrEmpty(configURL)){
+			Debug.LogError("Missing ConfigUrl. Please check your ID Setting.");
+		}
+
 		AppotaSDKReceiver.InitializeGameObjects ();
 		AndroidJNI.AttachCurrentThread ();
 		cls_AppotaUnityHandler = new AndroidJavaClass("com.appota.gamesdk.unity.UnityHandler");
@@ -261,11 +291,16 @@ public class AppotaSDKHandler {
 
 	public void Init(){
 
-		if (string.IsNullOrEmpty (AppotaSetting.InAppApiKey) || string.IsNullOrEmpty (AppotaSetting.NoticeURL) || string.IsNullOrEmpty (AppotaSetting.ConfigURL)) 
-		{
-			Debug.LogError ("Missing ID. Please check your ID Setting.");
-			return;
+		if(string.IsNullOrEmpty(AppotaSetting.InAppApiKey)){
+			Debug.LogError("Missing Apikey. Please check your ID Setting.");
+		} else
+		if (string.IsNullOrEmpty(AppotaSetting.NoticeURL)){
+			Debug.LogError("Missing NoticeUrl. Please check your ID Setting.");
+		} else 
+		if (string.IsNullOrEmpty(AppotaSetting.ConfigURL)){
+			Debug.LogError("Missing ConfigUrl. Please check your ID Setting.");
 		}
+
 		if (_Init != null)
 		{
 			_Init();
