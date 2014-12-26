@@ -113,8 +113,9 @@ void SwitchAccount(): đăng nhập với tài khoản khác.
 void MakePayment(): show form giao dịch thanh toán.
 void ShowUserInfo(): hiển thị thông tin User.
 void SetState(string paymentState): cài đặt trạng thái thanh toán.
+string GetUserID(): trả về UserID.
 ```
-*iOS Platform* có sự khác biệt với các chức năng:
+#####iOS Platform có sự khác biệt với các chức năng:
 ```c#
 void ShowPaymentButton(): show button truy cập nhanh vào form thanh toán.
 void HidePaymentButton(): hide button truy cập nhanh vào form thanh toán.
