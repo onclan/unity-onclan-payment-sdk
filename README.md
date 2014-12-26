@@ -117,8 +117,9 @@ void SwitchAccount(): login as a different account.
 void MakePayment(): show form payment transaction.
 void ShowUserInfo(): display User information.
 void SetState(string paymentState): Set payment state.
+string GetUserID(): return UserID.
 ```
-*iOS Platform* other features:
+#####iOS Platform other features:
 ```c#
 void ShowPaymentButton(): show quick-access-payment-form button.
 void HidePaymentButton(): hide quick-access-payment-form button.
