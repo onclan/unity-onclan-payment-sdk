@@ -151,12 +151,11 @@ OnClanSDKHandler.Instance.PostScore(score);
 ```
 
 ####Callback: 
-Nhận kết quả trả về từ OnClanPayment SDK và xử lý bằng cách cài đặt phần xử lý kết quả trong thân các hàm trong scripts <code>OnClanSDKReceiver.cs</code>.
+Nhận kết quả trả về từ OnClanPayment SDK và xử lý bằng cách cài đặt phần xử lý kết quả trong thân các hàm trong scripts <code>AppotaSDKReceiver.cs</code>.
 ```c#
-// OnClanSDKReceiver.cs 
+// AppotaSDKReceiver.cs 
 public void OnLoginSuccess(string appotaSession)
 {
-    // @appotaSession trả về là access_token của User
 	// Cài đặt phần xử lý
 }
 
@@ -165,21 +164,20 @@ public void OnLogoutSuccess()
 	// Cài đặt phần xử lý
 }
 
+public void OnPaymentSuccess(string transactionResult)
+{
+	// Cài đặt phần xử lý
+}
+
 void OnSwitchAccountSuccess(string appotaSession)
 {
-    // @appotaSession trả về là access_token của User
 	// Cài đặt phần xử lý
 }
 ```
-
-Scripts <code>AppotaSDKReceiver.cs</code>
-```c#
-public void OnPaymentSuccess(string transactionResult)
-{
-    // Cài đặt phần xử lý
-}
-```
-- <code>@transactionResult</code>: trả về theo định dạng: https://github.com/appota/ios-game-sdk/blob/master/payment_format
+<ul>
+<li><code>@appotaSession</code>: trả về là access_token của User. </li>
+<li><code>@transactionResult</code>: trả về theo định dạng:<br/> https://github.com/appota/ios-game-sdk/blob/master/payment_format  </li>
+</ul>
 
 ####Cài đặt Icon Game (Android platform only)
 
