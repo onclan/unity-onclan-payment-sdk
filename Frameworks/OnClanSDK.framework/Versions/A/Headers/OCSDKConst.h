@@ -10,18 +10,18 @@
 #define OCSDK_OCSDKConst_h
 
 
-#define OCSDK_DEBUG YES
+//#define OCSDK_DEBUG YES
 
 #define UNITY_DEPLOYMENT YES
 //#define PAYMENT_SDK_SUPPORT YES
 
 //#define WITH_TLS YES
 
-#ifdef OCSDK_DEBUG
+//#ifdef OCSDK_DEBUG
 #define OCSDKLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
-#else
-#define OCSDKLog(fmt, ...)
-#endif
+//#else
+//#define OCSDKLog(fmt, ...)
+//#endif
 
 typedef enum
 {
@@ -36,8 +36,9 @@ typedef enum
     OCSDKMenuTypeUser,
     OCSDKMenuTypeChat,
     OCSDKMenuTypeLeaderBoard,
+    OCSDKMenuTypeSupport,
     OCSDKMenuTypeVideo,
-    OCSDKMenuTypePayment,
+    OCSDKMenuTypePayment
 } OCSDKMenuType;
 
 typedef void (^OCSDKStringBlock)(NSString *xmlString);
@@ -52,8 +53,8 @@ typedef void (^OCSDKErrorBlock) (NSError *error);
 typedef void (^OCSDKViewHandler) (OCSDKViewAction action);
 typedef void (^OCSDKObjectHandler) (id object, NSError *error , NSString *message);
 
-#define OC_SDK_VERSION @"1.9"
-#define OC_SDK_BUILD @"9"
+#define OC_SDK_VERSION @"1.10"
+#define OC_SDK_BUILD @"10"
 #define OCSDK_API_VERSION @"1.0"
 
 #define ONCLAN_APP_SCHEMA @"onclan"

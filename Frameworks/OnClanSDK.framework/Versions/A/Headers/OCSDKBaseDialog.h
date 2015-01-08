@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 @protocol AppotaDialogDelegate;
 
+@protocol OCSDKBaseDialogDelegate <NSObject>
+- (void) pullView;
+@end
 
-@interface OCSDKBaseDialog : UIView <UIWebViewDelegate, UIScrollViewDelegate> {
+@interface OCSDKBaseDialog : UIView <UIWebViewDelegate, UIScrollViewDelegate, UIGestureRecognizerDelegate> {
 
     NSURLRequest *_serverRequest;
     NSURL* _serverURL;
@@ -30,10 +33,12 @@
     
     // Ensures that UI elements behind the dialog are disabled.
     UIView* _modalBackgroundView;
+    UIView *colorView;
 }
 /**
  * The delegate.
  */
+@property (nonatomic, assign) id<OCSDKBaseDialogDelegate>delegateDialog;
 @property(nonatomic, assign) id<AppotaDialogDelegate> delegate;
 
 -(void)setPadding:(float)padding borderWidth:(float)width;
@@ -44,6 +49,7 @@
 - (void) hideOrShowViewWithState:(BOOL) hideState;
 - (void)showSpinner;
 - (BOOL) isAjaxRequest:(NSURLRequest*) request ;
+
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

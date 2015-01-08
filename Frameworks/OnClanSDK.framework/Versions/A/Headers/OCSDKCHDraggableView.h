@@ -22,9 +22,7 @@
 - (void)draggableViewHold:(OCSDKCHDraggableView *)view;
 - (void)draggableView:(OCSDKCHDraggableView *)view didMoveToPoint:(CGPoint)point;
 - (void)draggableViewReleased:(OCSDKCHDraggableView *)view;
-
 - (void)draggableViewTouched:(OCSDKCHDraggableView *)view;
-
 - (void)draggableViewNeedsAlignment:(OCSDKCHDraggableView *)view;
 
 @end

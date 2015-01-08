@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "OCSDKConst.h"
+#import "OCSDKBaseDialog.h"
 
 #define DEFAULT_FRAME_WIDTH_IPHONE 300
 #define DEFAULT_FRAME_WIDTH_IPAD 512
 
 @class OCSDKViewDialog;
 
-@interface OCSDKBaseView : UIView
+@interface OCSDKBaseView : UIView<OCSDKBaseDialogDelegate>
 + (id) initViewFromXib;
 @property (nonatomic, strong) OCSDKViewDialog* dialog;
 @property (nonatomic, strong) OCSDKViewHandler handler;

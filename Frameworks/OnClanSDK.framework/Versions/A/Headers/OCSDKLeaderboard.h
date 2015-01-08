@@ -94,4 +94,13 @@
                                     onComplete:(OCSDKObjectBlock)completionBlock
                                        onError:(OCSDKErrorBlock)errorBlock;
 
++ (void) getListFriendWithStart:(int)start
+                      withLimit:(int)limit
+                     withCursor:(NSString*)cursor
+                     onComplete:(OCSDKObjectBlock)completionBlock
+                        onError:(OCSDKErrorBlock)errorBlock;
+
++ (unsigned long)getHighScoreOfUser;
+
++ (unsigned long)getHighScoreOfUserWithLeaderboardId:(NSString*)leaderboardId;
 @end

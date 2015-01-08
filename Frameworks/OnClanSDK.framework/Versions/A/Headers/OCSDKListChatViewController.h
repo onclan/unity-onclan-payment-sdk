@@ -27,4 +27,5 @@
 }
 
 @property (strong, nonatomic) OCSDKNavigationCustom *customView;
+@property (nonatomic) BOOL isWannaChatWithSupport;
 @end

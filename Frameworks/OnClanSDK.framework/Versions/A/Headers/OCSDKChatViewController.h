@@ -35,7 +35,6 @@ typedef enum {
     __weak IBOutlet UIView *aliasPopupView;
     __weak IBOutlet UIButton *okBtn, *aliasBtn, *realnameBtn;
     
-    __weak OCSDKNavigationCustom *customView;
     __weak OCSDKChatRecordView *recordView;
     __weak OCSDKChatEmoticonView *emoticonView;
     OCSDKChatSetupController *chatController;
@@ -49,7 +48,8 @@ typedef enum {
     BOOL isCall;
     NSString *gameSchema;
 }
-
+@property (weak, nonatomic) OCSDKNavigationCustom *customView;
+@property (nonatomic) BOOL isChatWithSupporter;
 @property (strong, nonatomic) IBOutlet UIView *viewChatVip;
 @property (nonatomic, strong) NSString *chatType;
 @property (weak, nonatomic) IBOutlet UIView *viewContentButtonScrollToBottom;

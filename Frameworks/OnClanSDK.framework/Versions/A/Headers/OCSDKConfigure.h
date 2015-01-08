@@ -18,6 +18,7 @@
 
 #pragma mark - Login handler
 @property (nonatomic, strong) OCSDKObjectHandler loginHandler;
+@property (nonatomic, strong) OCSDKObjectHandler updateUserInfoHandler;
 
 #pragma mark - Variable
 @property (readwrite) BOOL disableAutoShowLogin;
@@ -58,9 +59,8 @@
 
 #pragma mark - Show View function
 + (void) logOut;
-+ (void) showLoginView;
 
-//+ (void)showOCMenu:(BOOL)enableAppotaIcon withChat:(BOOL)enableChat withLeaderBoard:(BOOL)enableLeaderboard withCamera:(BOOL)enableCamera atPosition:(CGPoint)startPoint;
++ (void) showLoginView;
 
 + (void)showLeaderBoard;
 
@@ -71,6 +71,9 @@
 + (void)showUser;
 
 + (void) showPaymentView;
+
++ (void)showChatWithSupport ;
+
 #pragma mark - Support function
 + (BOOL) checkUserLoggedIn;
 
@@ -79,6 +82,11 @@
 - (void) loginCallBack:(id) object;
 
 - (void)setChatHeadPosition:(CGPoint)center;
+
+/*
+ * Set hidden state for chat head
+ */
++ (void) setChatHeadHidden:(BOOL)hidden;
 
 - (OCUserInfo*)getUserInfo;
 
