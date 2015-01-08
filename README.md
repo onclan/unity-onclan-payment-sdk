@@ -153,12 +153,11 @@ OnClanSDKHandler.Instance.PostScore(score);
 ```
 
 ####Callback: 
-Getting results returned from OnClan SDK and handling by setting "result processing" in functions in script <code>OnClanSDKReceiver.cs</code>.
+Getting results returned from OnClan SDK and handling by setting "result processing" in functions in script <code>AppotaSDKReceiver.cs</code>.
 ```c#
-// OnClanSDKReceiver.cs 
+// AppotaSDKReceiver.cs 
 public void OnLoginSuccess(string appotaSession)
 {
-    // @appotaSession return access_token of User
 	// Set processing part
 }
 
@@ -167,20 +166,17 @@ public void OnLogoutSuccess()
 	// Set processing part
 }
 
+public void OnPaymentSuccess(string transactionResult)
+{
+	// Set processing part
+}
+
 void OnSwitchAccountSuccess(string appotaSession)
 {
-    // @appotaSession return access_token of User
 	// Set processing part
 }
 ```
-
-Scripts <code>AppotaSDKReceiver.cs</code>
-```c#
-public void OnPaymentSuccess(string transactionResult)
-{
-    // Set processing part
-}
-```
+- <code>@appotaSession</code>: return <code>access_token</code> of User.
 - <code>@transactionResult</code>: return with format: https://github.com/appota/ios-game-sdk/blob/master/payment_format
 
 ####Setting Icon Game (Android platform only)
