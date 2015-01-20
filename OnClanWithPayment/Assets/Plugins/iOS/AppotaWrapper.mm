@@ -121,11 +121,26 @@ extern "C" {
 		return [AppotaGameSDKConfigure checkUserLogin];
 	}
 	
-	const char* getUserID() {
-        char* res = (char*)malloc(strlen([[AppotaGameSDKConfigure getUserID] UTF8String]) + 1);
-        strcpy(res, [[AppotaGameSDKConfigure getUserID] UTF8String]);
-        NSLog(@"Logout %@", [NSString stringWithUTF8String:res]);
+	char* cStringCopy(const char* string)
+    {
+        if (string == NULL)
+            return NULL;
+        
+        char* res = (char*)malloc(strlen(string) + 1);
+        strcpy(res, string);
+        
         return res;
+    }
+	
+	const char* getUserID() {
+		if (![AppotaGameSDKConfigure getUserID]) {
+			NSString *emptyString = @"";
+        	return cStringCopy([emptyString UTF8String]);
+		}
+		else {
+			NSString *userString = [AppotaGameSDKConfigure getUserID];
+        	return cStringCopy([userString UTF8String]);
+		}
     }
 }
 
