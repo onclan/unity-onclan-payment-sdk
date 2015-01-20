@@ -10,7 +10,7 @@
 #define OCSDK_OCSDKConst_h
 
 
-#define OCSDK_DEBUG YES
+//#define OCSDK_DEBUG YES
 
 #define UNITY_DEPLOYMENT YES
 //#define PAYMENT_SDK_SUPPORT YES
