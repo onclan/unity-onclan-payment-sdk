@@ -9,7 +9,6 @@
 #ifndef OCSDK_OCSDKConst_h
 #define OCSDK_OCSDKConst_h
 
-
 //#define OCSDK_DEBUG YES
 
 #define UNITY_DEPLOYMENT YES
