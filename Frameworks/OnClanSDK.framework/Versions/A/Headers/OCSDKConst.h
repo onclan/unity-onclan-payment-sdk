@@ -17,7 +17,7 @@
 //#define WITH_TLS YES
 
 //#ifdef OCSDK_DEBUG
-#define OCSDKLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define OCSDKLog(fmt, ...) //NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 //#else
 //#define OCSDKLog(fmt, ...)
 //#endif
