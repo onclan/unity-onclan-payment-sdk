@@ -93,6 +93,10 @@ extern "C" {
 	const void showPaymentView(){
 		[AppotaGameSDKConfigure showPaymentView];
 	}
+	
+	const void closePaymentView(){
+		[AppotaGameSDKConfigure closePaymentView];
+	}
 
 	const void showPaymentButton(){
 		[AppotaGameSDKConfigure showPaymentButton];
@@ -133,7 +137,7 @@ extern "C" {
     }
 	
 	const char* getUserID() {
-		if (![AppotaGameSDKConfigure getUserID]) {
+        if (![AppotaGameSDKConfigure getUserID]) {
 			NSString *emptyString = @"";
         	return cStringCopy([emptyString UTF8String]);
 		}

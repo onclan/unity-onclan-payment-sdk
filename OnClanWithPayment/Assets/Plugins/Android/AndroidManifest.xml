@@ -33,6 +33,7 @@
     </activity>
     <activity android:name="com.onclan.android.core.OnClanActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:theme="@android:style/Theme.Dialog">
     </activity>
+    <!-- AppotaSDK activity -->
     <activity android:name="com.appota.gamesdk.UserActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:launchMode="singleTask" android:theme="@style/Theme.Appota.GameSDK" android:windowSoftInputMode="adjustPan">
     </activity>
     <activity android:name="com.appota.gamesdk.UserInfoActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:theme="@style/Theme.Appota.GameSDK" android:windowSoftInputMode="adjustPan" />

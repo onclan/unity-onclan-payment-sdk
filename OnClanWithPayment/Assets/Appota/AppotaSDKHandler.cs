@@ -60,6 +60,9 @@ public class AppotaSDKHandler {
 	private static extern void showPaymentView();
 
 	[DllImport("__Internal")]
+	private static extern void closePaymentView();
+
+	[DllImport("__Internal")]
 	private static extern void hidePaymentButton();
 
 	[DllImport("__Internal")]
@@ -142,6 +145,11 @@ public class AppotaSDKHandler {
 	public void MakePayment()
 	{
 		showPaymentView ();
+	}
+
+	public void ClosePaymentView()
+	{
+		closePaymentView();
 	}
 
 	public void ShowPaymentButton()
