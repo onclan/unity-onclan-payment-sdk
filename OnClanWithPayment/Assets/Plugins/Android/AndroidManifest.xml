@@ -41,12 +41,12 @@
     <!-- FB -->
     <activity android:name="com.appota.facebook.LoginActivity" />
     <service android:name="com.onclan.android.chat.mqtt.ChatService" />
-    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="\ 680041192089521" />
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="\ 778450418858705" />
     <meta-data android:name="com.appota.twitter.consumer.key" android:value="sPUTzrofI64ZPfIWseVb9J1gD" />
     <meta-data android:name="com.appota.twitter.consumer.secret" android:value="NL20spzHgcOL5yObzZFeMLgKlENVXzKmqJytwhJ8eTwfOFqzdl" />
     <meta-data android:name="APPOTA_PIRATE_ID" android:value="abc" />
     <meta-data android:name="com.appota.sandboxApiKey" android:value="781b83c011a0d1bc2719ebca34b7eec2053cfc585" />
-    <meta-data android:name="com.appota.apiKey" android:value="e7448c09c46d1e5b64298ed45a10b993053d5fd12" />
+    <meta-data android:name="com.appota.apiKey" android:value="K-A163858-U00000-1EG8JF-EF6BFAD9CE4AA90E" />
     <activity android:name="com.facebook.unity.FBUnityLoginActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
     </activity>
     <activity android:name="com.facebook.unity.FBUnityDeepLinkingActivity" android:exported="true">
