@@ -169,7 +169,6 @@ public class AppotaSDKHandler {
 
 	public void ShowLoginView()
 	{
-		Debug.Log ("Fucking call showLoginView");
 		showLoginView();
 	}
 
