@@ -224,6 +224,11 @@ public class AppotaSDKHandler {
 		args [3] = sandboxApiKey;
 		Debug.Log("Called init Android " + args[0]);
 		cls_AppotaUnityHandler.CallStatic("Init", args);
+
+		if (AppotaSDKHandler.Instance.IsUserLogin()) {
+			cls_AppotaUnityHandler.CallStatic("ManualLogin");
+		}
+
 		Debug.Log("Called init Android ");
 	}
 
